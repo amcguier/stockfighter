@@ -53,6 +53,7 @@
     <Compile Include="stockfighter/SocketWrapper.fs" />
     <Compile Include="stockfighter/StockfighterBase.fs" />
     <Compile Include="stockfighter/StockfighterFunctional.fs" />
+    <Compile Include="stockfighter/StockfighterGM.fs" />
     <Compile Include="stockfighter/StockfighterApi.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>

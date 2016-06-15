@@ -6,6 +6,21 @@ module StockfigherCommon
   open FSharp.Data
   open FSharp.Data.JsonExtensions
 
+
+  type GM (valueString) =
+    let value = JsonValue.Parse valueString
+    member this.instanceId = value?instanceId.AsInteger64()
+    member this.account = value?account.AsString()
+    member this.instructions = value?instructions.AsString()
+    member this.tickers = value?tickers.AsArray()
+                          |> Array.map (fun v -> v.AsString())
+                          |> List.ofArray
+    member this.venues = value ? venues.AsArray()
+                         |> Array.map (fun v -> value.AsString())
+                         |> List.ofArray
+    member this.secondsPerTradingDay = value ? secondsPerTradingDay.AsInteger()
+
+
   type Direction =
     | Buy
     | Sell
@@ -53,8 +68,6 @@ module StockfigherCommon
     member this.ok: bool = info?ok.AsBoolean()
     member this.symbol: String = info?symbol.AsString()
     member this.venue: String = info?venue.AsString()
-
-
 
   type GetQuoteResponse(response : String) =
     let info = JsonValue.Parse(response)
