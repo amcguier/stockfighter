@@ -51,9 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="stockfighter/SocketWrapper.fs" />
-    <Compile Include="stockfighter/StockfighterBase.fs" />
+    <Compile Include="stockfighter/Common.fs" />
     <Compile Include="stockfighter/StockfighterFunctional.fs" />
-    <Compile Include="stockfighter/StockfighterApi.fs" />
+    <Compile Include="stockfighter/StockApi.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
   <PropertyGroup>
