@@ -1,4 +1,5 @@
-module StockfighterApi
+namespace stockfighter
+module StockApi =
   open System
   open System.IO
   open System.Text
@@ -8,7 +9,7 @@ module StockfighterApi
   open HttpClient
   open FSharp.Data
   open FSharp.Data.JsonExtensions
-  open StockfigherCommon
+  open Common
   open SocketWrapper
 
   let logOrderBook (orderBook: OrderBook) =

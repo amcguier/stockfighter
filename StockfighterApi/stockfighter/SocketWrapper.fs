@@ -1,4 +1,6 @@
-module SocketWrapper
+namespace stockfighter
+
+module SocketWrapper = 
   open System
   open System.IO
   open System.Text

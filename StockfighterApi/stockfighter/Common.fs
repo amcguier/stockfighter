@@ -1,4 +1,4 @@
-module StockfigherCommon
+module Common
   open System
   open System.Text
   open System.Web.Script.Serialization
